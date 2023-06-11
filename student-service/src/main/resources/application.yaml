@@ -1,0 +1,17 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: student-service
+  config:
+    import: "optional:configserver:http://localhost:8088"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/TaskAssignment
+    username: root
+    password: SSql@310
+    driverClassName: com.mysql.cj.jdbc.Driver
